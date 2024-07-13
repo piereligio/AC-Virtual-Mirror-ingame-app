@@ -1,8 +1,16 @@
 local config = ac.storage{
-  colorScheme = "LightTransparent"
+  colorScheme = "Default"
 }
 
 local colorSchemes = {
+  Default = {
+    background = rgbm(0.0, 0.0, 0.0, 1),
+    foreground = rgbm(1, 1, 1, 1)
+  },
+  Light = {
+    background = rgbm(0.0, 0.0, 0.0, 1),
+    foreground = rgbm(0.8, 0.8, 0.8, 1)
+  },
   LightTransparent = {
     background = rgbm(0.0, 0.0, 0.0, 0.3),
     foreground = rgbm(1, 1, 1, 0.8)
@@ -10,10 +18,6 @@ local colorSchemes = {
   LightMoreTransparent = {
     background = rgbm(0.0, 0.0, 0.0, 0.25),
     foreground = rgbm(1, 1, 1, 0.6)
-  },
-  Light = {
-    background = rgbm(0.0, 0.0, 0.0, 1),
-    foreground = rgbm(0.8, 0.8, 0.8, 1)
   },
   Inverted = {
     background = rgbm(1, 1, 1, 1),
@@ -30,7 +34,7 @@ local colorSchemes = {
 }
 
 function script.windowSettings(dt)
-  ui.header('Color Scheme')
+  ui.header('Color Scheme (for Pure)')
   for name, _ in pairs(colorSchemes) do
     if ui.radioButton(name, config.colorScheme == name) then
       config.colorScheme = name
