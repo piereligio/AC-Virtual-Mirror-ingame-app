@@ -1,7 +1,7 @@
 local config = ac.storage{
   backgroundColor = rgbm(0.0, 0.0, 0.0,0.3),
   foregroundColor = rgbm(1,1,1, 0.8),
-  colorScheme = "default"
+  colorScheme = "LightTransparent"
 }
 
 function script.windowSettings(dt)
