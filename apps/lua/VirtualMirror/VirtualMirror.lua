@@ -11,6 +11,11 @@ function script.windowSettings(dt)
     config.backgroundColor = rgbm(0.0, 0.0, 0.0,0.3)
     config.foregroundColor = rgbm(1,1,1, 0.8)
   end
+  if ui.radioButton('LightMoreTransparent', config.colorScheme == "lightmoretransparent") then 
+    config.colorScheme = "lightmoretransparent" 
+    config.backgroundColor = rgbm(0.0, 0.0, 0.0,0.25)
+    config.foregroundColor = rgbm(1,1,1, 0.6)
+  end
   if ui.radioButton('Light', config.colorScheme == "light") then 
     config.colorScheme = "light"
     config.backgroundColor = rgbm(0.0, 0.0, 0.0, 1)
